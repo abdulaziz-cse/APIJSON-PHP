@@ -13,7 +13,7 @@ class BookController extends BaseController
 
 public function index()
 {
-    # code...
+
     $books = Book::all();
     return $this->sendResponse($books->toArray(), 'Books read succesfully');
 }
@@ -75,10 +75,6 @@ public function update(Request $request , Book $book)
     return $this->sendResponse($book->toArray(), 'Book  updated succesfully');
     
 }
-
-
-
-
 
 // delete book 
 public function destroy(Book $book)
